@@ -10,8 +10,8 @@ const App = () => {
 
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [id]: value }));
-        setErrors((prevErrors) => ({ ...prevErrors, [id]: '' }));
+        setFormData((prevData) => ({ ...prevData, [id.replace('input-', '')]: value }));
+        setErrors((prevErrors) => ({ ...prevErrors, [id.replace('input-', '')]: '' }));
     };
 
     const handleSubmit = (e) => {
